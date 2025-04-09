@@ -13,6 +13,7 @@ export async function getOpenAiResponse(message: string) {
         content: [
           {
             type: "input_text",
+            // OpenAI's instructions
             text: "Read X posts from key stakeholders and provide a sentiment on whether its good or bad for the trade market.\n\nReponses will be short, whether its positive, neutral or negative. No more than 6 words.",
           },
         ],
