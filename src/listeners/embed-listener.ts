@@ -20,12 +20,11 @@ export class EmbedListener extends Listener {
   }
 
   public async run(message: Message) {
-    if (message.author.id !== process.env.DISCORD_CHANNEL_ID) return;
+    if (message.author.id !== process.env.TWEETSHIFT_USER_ID) return;
 
     if (!message.embeds || message.embeds.length === 0) return;
 
     console.log(`Got an embed from ${message.author.tag}`);
-    console.log(`[EMBEDS]: ${message.embeds}`);
     message.embeds.forEach((embed, i) => {
       console.log(`Embed #${i + 1}:`, embed.toJSON());
     });
